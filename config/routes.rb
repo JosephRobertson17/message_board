@@ -14,5 +14,10 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
 
+  get "message_boards", to: "chatroom#index"
+  post "create_message_boards", to: "chatroom#create"
+  post "join_message_boards", to: "chatroom#join"
+  delete "leave_message_boards", to: "chatroom#leave"
+
   get "about", to: "about#index", as: :about
 end
