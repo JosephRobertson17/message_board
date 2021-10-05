@@ -1,6 +1,23 @@
 <% if session[:message_board_id] %>
     <h1><%= Current.message_board.name %></h1>
+    <% if Current.messages %>
+        <% Current.messages.each do |message| %>
+            <div>
+                <%= message.username %>:
+                <%= message.data %>
+            </div>
+            <br/>
+        <% end %>
+    <% end %>
     <br/><br/>
+    <%= form_with model: @message_temp, url: send_message_path do |form| %>
+        <div class="mb-3">
+            <%= form.text_field :data, class: "form-control", placeholder: "Message" %>
+        </div>
+        <div class="mb-3">
+            <%= form.submit "Send", class: "btn btn-primary" %>
+        </div>
+    <% end %>
     <%= button_to "Leave", leave_message_boards_path, method: :delete %>
 <% else %>
     <h1>Create message board</h1>

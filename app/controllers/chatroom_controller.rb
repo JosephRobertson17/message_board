@@ -2,6 +2,7 @@ class ChatroomController < ApplicationController
     before_action :require_user_logged_in!
     def index
         @chat_room = ChatRoom.new
+        @message_temp = Message.new
     end
 
     def join
@@ -10,7 +11,7 @@ class ChatroomController < ApplicationController
 
         if @chat_room.present? && @chat_room.authenticate(user_params[:password])
             session[:message_board_id] = @chat_room.id
-            redirect_to message_boards_path, notice: "logged in successfully"
+            redirect_to message_boards_path
         else
             redirect_to message_boards_path, notice: "incorrect name or password"
         end

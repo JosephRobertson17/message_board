@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   post "create_message_boards", to: "chatroom#create"
   post "join_message_boards", to: "chatroom#join"
   delete "leave_message_boards", to: "chatroom#leave"
+  post "send_message", to: "message#send_message"
 
   get "about", to: "about#index", as: :about
 end
