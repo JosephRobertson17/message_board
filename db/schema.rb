@@ -20,12 +20,11 @@ ActiveRecord::Schema.define(version: 2021_10_03_192117) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer "chatroom_id", null: false
+    t.integer "chat_room_id"
     t.string "username"
     t.string "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,5 +35,4 @@ ActiveRecord::Schema.define(version: 2021_10_03_192117) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "messages", "chatrooms"
 end
