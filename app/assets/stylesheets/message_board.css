@@ -1,0 +1,14 @@
+.grid {
+    display: grid;
+    grid-template-rows: 100px 500px 200px;
+}
+.title {
+    grid-row: 1;
+}
+.messages {
+    grid-row: 2;
+    overflow-y: scroll;
+}
+.sendButton{
+    grid-row: 3;
+}
