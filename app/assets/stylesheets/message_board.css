@@ -8,12 +8,7 @@
 .messages {
     grid-row: 2;
     overflow-y: scroll;
-    overflow-anchor: none;
 }
 .sendButton{
     grid-row: 3;
-}
-.anchor {
-    overflow-anchor: auto;
-    height: 1px;
 }
