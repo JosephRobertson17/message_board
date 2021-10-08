@@ -2,6 +2,7 @@
     <div class="grid">
         <div class="title">
             <h1><%= Current.message_board.name %></h1>
+            <%=link_to "Check for new messages", message_boards_path, class: "nav-link"%>
         </div>
         <div class="messages">
             <% if Current.messages %>
