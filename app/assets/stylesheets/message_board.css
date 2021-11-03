@@ -6,10 +6,23 @@
     top: 10px;
 }
 .messages {
+<<<<<<< HEAD
     position: absolute;
     top: 100px;
 }
 .sendButton{
     position: absolute;
     bottom: 10px;
+=======
+    grid-row: 2;
+    overflow-y: scroll;
+    overflow-anchor: none;
+}
+.sendButton{
+    grid-row: 3;
+}
+.anchor {
+    overflow-anchor: auto;
+    height: 1px;
+>>>>>>> b23682197e7b94c8aad2906b9d522f8cbbc22846
 }
