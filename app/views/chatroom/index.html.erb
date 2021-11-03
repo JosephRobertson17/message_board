@@ -17,7 +17,8 @@
             <div class="anchor"></div>
         </div>
         <br/><br/>
-        <div class="sendButton">
+    </div>
+    <div class="sendButton">
             <%= form_with model: @message_temp, url: send_message_path do |form| %>
                 <div class="mb-3">
                     <%= form.text_field :data, class: "form-control", placeholder: "Message" %>
@@ -27,7 +28,6 @@
                 </div>
             <% end %>
             <%= button_to "Leave", leave_message_boards_path, method: :delete %>
-        </div>
     </div>
 <% else %>
     <h1>Create message board</h1>
